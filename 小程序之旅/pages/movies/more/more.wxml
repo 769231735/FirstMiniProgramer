@@ -1,0 +1,10 @@
+<!--pages/movies/more/more.wxml-->
+<!-- <text>更多页面</text> -->
+<import src="../movies-grid-template/movies-grid-template.wxml"/>
+<view class='moreList'>
+    <block wx:key wx:for = "{{more}}">
+        <template is = "movies-grid-template" data="{{...more[index]}}"></template>
+    </block>
+</view>
+
+

@@ -1,0 +1,18 @@
+/* pages/news/news.wxss */
+/*用@import*/
+@import './news-item/news-item-template.wxss';
+swiper{
+  height: 584rpx;
+  width: 100%;
+}
+swiper image{
+  height: 584rpx;
+  width: 100%;
+}
+ .container{
+    background-color: #f8f8f8;
+} 
+.allNews{
+    background-color: #f8f8f8;   
+}
+

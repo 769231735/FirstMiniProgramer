@@ -1,0 +1,33 @@
+<template name = "newsItem">
+    <view bindtap='viewDetail' class='item' data-post-id='{{item.postId}}'>
+        <view class='avatarDate'>
+            <image class='newAvatar' src='{{item.avatar}}'></image>
+            <text class='date'>{{item.date}}</text>
+        </view>
+        <!--条目标题  -->
+        <view>
+            <text class='title'>{{item.title}}</text>
+        </view>
+        <!--条目图片  -->
+        <view>
+            <image class='itemImg' src='{{item.imgSrc}}'></image>
+        </view>
+        <!--文章  -->
+        <view class='essay'>
+            <text>
+                {{item.content}}
+            </text>
+        </view>
+        <!--评论和点赞  -->
+        <view class='comEye'>
+            <view class='comment'>
+                <image src='/images/icon/chat1.png'></image>
+                <text>{{item.collection}}</text>
+            </view>
+            <view class='eye'>
+                <image src='/images/icon/view.png'></image>
+                <text>{{item.reading}}</text>
+            </view>
+        </view>
+    </view>
+</template>

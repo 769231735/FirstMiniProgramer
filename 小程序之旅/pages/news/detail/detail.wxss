@@ -1,0 +1,85 @@
+/* pages/news/detail/detail.wxss */
+.headImg{
+    position: relative;
+}
+.headImg image{
+    width: 100%;
+    height: 450rpx;
+    
+
+}
+#musicImg{
+    width:100rpx;
+    height:100rpx;
+    position: absolute;
+    z-index: 100;
+    left: 325rpx;
+    top: 180rpx;
+}
+/*大图下面的布局  */
+.avatar{
+    padding: 30rpx;
+    display: flex;
+    align-items: center;
+}
+.avatar image{
+    width:80rpx;
+    height: 80rpx;
+}
+.avatar text:nth-of-type(1){
+    color: #a0a0a0;
+    font-size: 38rpx;
+    margin-left: 20rpx;
+} 
+.avatar text:nth-of-type(2){
+    color: #999999;
+    font-size: 30rpx;
+    margin-left: 20rpx;
+} 
+.avatar text:nth-of-type(3){
+    color: #999999;
+    font-size: 30rpx;
+    margin-left: 20rpx;
+} 
+.title{
+    /* height: 200rpx; */
+    color:#4b556c;
+    font-weight: bolder;
+     height: auto; 
+    padding: 45rpx;
+    position: relative;
+}
+.title view{
+
+    border-bottom: 2px solid #e5e5e5;
+
+    margin-top: 80rpx;
+}
+.title image{
+    width: 100rpx;
+    height: 100rpx;
+    position: absolute;
+    
+}
+.title image:nth-of-type(1){
+    left: 490rpx;
+    top: 125rpx;
+}
+.title image:nth-of-type(2){
+    left: 610rpx;
+    top: 125rpx;
+}
+/* .collection{
+    padding:45rpx;
+} */
+.collection image{
+    width:100rpx;
+    height: 100rpx;
+}
+.detail{
+    padding: 45rpx;
+    font-size: 35rpx;
+    color: #666666;
+    letter-spacing: 5rpx;
+    height: auto;
+}

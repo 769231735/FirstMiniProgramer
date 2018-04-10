@@ -1,0 +1,15 @@
+<import src = "../movies-grid-template/movies-grid-template.wxml"/>
+<template name = "movies-list-template">  
+        <view class='list'>
+            <view class='hot'>
+                <text>{{titleText}}</text>
+                 <text bindtap='more' data-id = "{{id}}">更多></text> 
+            </view>
+            <view class='moviesList'>
+                <block wx:key wx:for="{{list}}" >
+                <!--item是系统定义的数组的每一条  -->
+                    <template is = "movies-grid-template" data="{{...item}}"></template>
+                </block>
+            </view>
+        </view>
+</template>

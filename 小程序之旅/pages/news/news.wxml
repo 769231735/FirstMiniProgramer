@@ -1,0 +1,32 @@
+<!--pages/news/news.wxml-->
+<!--小程序提供了模板化，使得普通的wxml也能像函数一样封装复用  -->
+<!--1.模板化的核心标签为<template>  -->
+<!--2.模板使用<template name = "模板名"></template> 定义 -->
+<!--3.模板的导入：使用<import src = "模板的路径"/>导入 -->
+<!--4.使用<template is = "指定所引入模板的name" />调用  -->
+<!--5.数据传递：在<template/>添加data属性  -->
+<!--6.模板不具备自己的逻辑层，所有的时间处理方法，模板的事件处理方法，都绑定在使用该模板的Page上，具备自己的wxss，表现层的引入使用@import在引入该模板的页面德wxss中引入  -->
+<import  src= "./news-item/news-item-template.wxml" />
+<view class='container'>
+    <scroll-view>
+        <swiper circular='true' indicator-color='white' indicator-active-color='lightgray' indicator-dots="{{indicatorDots}}" autoplay="true" interval="{{interval}}" duration="1000">
+            <block wx:key="unique" wx:for="{{imgUrls}}">
+                <swiper-item>
+                    <image src="{{item}}" class="slide-image" />
+                </swiper-item>
+            </block>
+        </swiper>
+        <!--所有的阅读项  -->
+        <view class='allNews' >
+            <block wx:for = "{{newsList}}" wx:key="{{index}}">
+                <!--用data属性  -->
+                 <template is = "newsItem" data = "{{item}}"></template> 
+                <!-- <template is = "newsItem" data = "{{...item}}">
+                </template> -->
+                <!-- 加...item ,就相当于解析每一个对象，后面的模板就直接用这个对象的属性就可以了，很好用!-->
+                <!--直接的{{item}}是相当于遍历数组，是数组的每一项-->
+            </block>
+        </view>
+    </scroll-view>
+
+</view>

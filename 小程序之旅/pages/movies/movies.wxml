@@ -1,0 +1,26 @@
+<!--pages/movies/movies.wxml-->
+<!--1.模板文件中可以引入其他模板  -->
+<!--2.一个文件可以引入多个模板-->
+<import src = "./movies-list-template/movies-list-template.wxml" />
+<import src = "./movies-grid-template/movies-grid-template.wxml" />
+<view class='container'>
+    <view class='search'>
+        <!--input框聚焦就进行搜索  -->
+        <input catch:confirm="searchList" value='{{searchValue}}'  catch:focus='inputData'  placeholder-style="color:#d1d1d1;font-size:30rpx;margin-left:60rpx;" confirm-type="search" type='text' placeholder='釜山行、夏有乔木仰望天堂'></input>
+        <image class='searchImg' src='/images/icon/search.png'></image>
+        <!--点击x就回到电影首页  -->
+        <image bindtap = "backMoviesIndex" wx:if="{{isSearched}}" class='xxImg' src='/images/icon/xx.png'></image>
+    </view>
+    <!--解决定位问题的标签-->
+    <view class='marginTop'></view>
+    <view wx:if="{{!isSearched}}">
+        <template is = "movies-list-template" data="{{...in_theaters,id:0}}"></template>
+        <template is = "movies-list-template" data="{{...comming_soon,id:1}}"></template>
+        <template is = "movies-list-template" data="{{...top250,id:2}}"></template>
+    </view>
+    <view class='searchList' wx:if="{{isSearched}}">
+        <block wx:key="{{index}}" wx:for = "{{searchList}}">
+            <template is="movies-grid-template" data="{{...searchList[index]}}"></template>
+        </block>
+    </view>
+</view>

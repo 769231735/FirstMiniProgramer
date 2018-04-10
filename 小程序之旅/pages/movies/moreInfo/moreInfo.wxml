@@ -1,0 +1,89 @@
+<!--pages/movies/moreInfo/moreInfo.wxml-->
+<import src = "../movies-star-template/movies-star-template.wxml"/>
+<view class='container'>
+    <!--上部分 -->
+    <view class='pageTop'>
+        <view class='bg'>
+            <image src='{{moreInfo.images.large}}'></image>
+        </view>
+        <view class='title'>
+            <text>{{moreInfo.title}}</text>
+        </view>
+        <view class='countries'>
+            <text>{{moreInfo.countries[0]}} · {{moreInfo.year}}</text>
+        </view>
+        <view class='wish_comment'>
+            <text class='wish'>{{moreInfo.wish_count}}</text>
+            <text>人喜欢</text>
+            <text class='comment'>{{moreInfo.comments_count}}</text>
+            <text>条评论</text>
+        </view>
+        <view class='images'>
+            <image src='{{moreInfo.images.large}}'></image>
+        </view>
+    </view>
+    <!--调整上面的定位的margintop的空标签 -->
+    <view class='marginTop'></view>
+    <!--中部  -->
+    <view class='pageMiddle'>
+        <view class='original_title'>
+            <text>{{moreInfo.original_title}}</text>
+            
+        </view>
+        <view class='dRating'>
+            <text class='mList'>评分</text>
+            <view class='mContent'>
+                <template is = "movies-star-template" data="{{...moreInfo.rating}}"></template>
+
+            </view>
+        </view>
+        <view class='directors'>
+            <text class='mList'>导演</text>
+            <text class='mContent'>{{moreInfo.directors[0].name}}</text>
+        </view>
+        <view class='casts'>
+            <text class='mList'>影人</text>
+            <block wx:key wx:for="{{moreInfo.casts}}">
+                <text class='mContent'>{{item.name}}/</text>
+                <!-- <text></text> -->
+                <!-- <text class='mContent'>李连杰</text> -->
+            </block>
+        </view>
+        <view class='genres'>
+            <text class='mList'>类型</text>
+            <block wx:key="unique" wx:for = "{{moreInfo.genres}}">
+                <text class='mContent'>{{item}}/</text>
+            </block>
+
+        </view>
+
+    </view>
+    <view class='pageMiddle'>
+        <view class='summary'>
+                剧情简介
+        </view>
+        <view class='sContent'>
+            {{moreInfo.summary}}
+        </view>
+    </view>
+    <view class='pageMiddle'>
+        <view class='summary'>
+                影人
+        </view>
+        <!--scroll-x横拉条的实现  -->
+        <view class='casts_avatars'>
+            <scroll-view scroll-x = "true" class='scroll-x'>
+                <view class='wrap'>
+                      <block wx:key= "unique" wx:for = "{{moreInfo.casts}}">  
+                        <view class='wrap_list'>  
+                             <image class='castsImg' src='{{item.avatars.large}}'></image> 
+                            <view>
+                                <text class='castsName'>{{item.name}}</text>
+                            </view>    
+                        </view>
+                      </block>  
+                </view>
+            </scroll-view>  
+        </view>
+    </view>   
+</view>

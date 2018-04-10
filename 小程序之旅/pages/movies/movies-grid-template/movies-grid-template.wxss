@@ -1,0 +1,21 @@
+@import "../movies-star-template/movies-star-template.wxss";
+.grid{
+    width: 200rpx;
+    height: 400rpx;
+    font-size: 30rpx;
+    margin-left: 37rpx;
+    margin-top: 15rpx;
+    
+}
+.images image{
+    width: 200rpx;
+    height: 270rpx;
+
+}
+.title{
+    white-space: nowrap;
+    word-break: keep-all;
+    text-overflow: ellipsis;
+    overflow: hidden; 
+    color: #aaaaaa;
+}

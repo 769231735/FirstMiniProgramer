@@ -1,0 +1,39 @@
+{
+  "pages":[
+      "pages/index/index",
+      "pages/movies/movies",   
+        "pages/news/news",
+        "pages/news/detail/detail",
+        "pages/movies/more/more",
+        "pages/movies/moreInfo/moreInfo"
+  ],
+  "window":{
+    "backgroundTextStyle":"light",
+    "navigationBarBackgroundColor": "#405f80",
+    "navigationBarTextStyle":"white",
+    "enablePullDownRefresh": false,
+    "backgroundColor": "#000000"
+  },
+  "tabBar": {
+    "list": [
+      {
+        "pagePath": "pages/news/news",
+        "text": "news",
+        "iconPath":"/images/tab/yuedu.png",
+        "selectedIconPath":"/images/tab/yuedu_hl.png"
+      },
+      {
+        "pagePath": "pages/movies/movies",
+        "text":"movies",
+        "iconPath": "/images/tab/dianying.png",
+        "selectedIconPath": "/images/tab/dianying_hl.png"
+      }
+    ],
+    "color":"gray",
+    "selectedColor":"black",
+    "backgroundColor":"#e5e5e5",
+    "borderStyle":"black",
+    "position":"bottom"
+  }
+}
+ 

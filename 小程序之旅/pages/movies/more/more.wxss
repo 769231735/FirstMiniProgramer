@@ -1,0 +1,6 @@
+/* pages/movies/more/more.wxss */
+@import "../movies-grid-template/movies-grid-template.wxss";
+.moreList{
+    display: flex;
+    flex-wrap: wrap;
+}

@@ -1,0 +1,50 @@
+.newAvatar{
+  width: 70rpx;
+  height: 70rpx;
+  margin-right: 40rpx;
+}
+.avatarDate{
+  display: flex;
+  padding: 20rpx;
+  font-size: 35rpx;
+  color: #686868;
+  align-items: center;
+}
+.item{
+    width: 100%;
+    height: auto;
+    background: white; 
+    margin-top: 40rpx;
+  
+}
+.title{
+  padding: 20rpx;
+}
+.itemImg{
+  width: 100%;
+  margin-top: 20rpx;
+}
+.essay{
+  padding: 10rpx 20rpx 20rpx 20rpx;
+  letter-spacing: 5rpx;
+  color: #666666;
+  font-size: 35rpx;
+}
+/*评论和观看的人数*/
+.comEye{
+    display: flex;
+    padding: 20rpx;
+    align-items: center;
+    font-size: 38rpx;
+    color: #a2a2a2;
+}
+.comEye image{
+    width: 32rpx;
+    height: 32rpx;
+}
+.comment{
+    margin-right: 40rpx;
+}
+.comment image, .eye image{
+    margin-right: 20rpx;
+}

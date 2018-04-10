@@ -1,0 +1,14 @@
+<import src = "../movies-star-template/movies-star-template.wxml"/>
+<template name = "movies-grid-template">
+    <view catchtap='moreInfo' data-grid-id="{{id}}" class='grid'>
+        <view class='images'>
+            <image  src='{{images.large}}'></image>
+        </view>
+        <view class='title'>
+            <text>{{original_title}}</text>
+        </view>
+        <view>
+            <template is="movies-star-template" data="{{...rating}}"></template> 
+        </view>
+    </view>
+</template>

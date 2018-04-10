@@ -1,0 +1,9 @@
+<!--index.wxml-->
+<view class="container">
+  <image class='avatar' src='{{avatarUrl}}'></image>
+  <text class='nickName'>{{nickName}}</text>
+
+  <view class='btn'>
+    <text class='btnText' bind:tap='comeIn'>开启小程序之旅</text>
+  </view>
+</view>

@@ -1,0 +1,24 @@
+<!--pages/news/detail/detail.wxml-->
+ <view class='container'>
+    <view class='headImg' >
+        <image src='{{news.imgSrc}}'></image>
+        <!--src使用了三目运算符  -->
+        <image bindtap='changeMusic' id='musicImg' src='{{isPlaying?"/images/music/music-stop.png":"/images/music/music-start.png"}}'></image>
+    </view>
+    <view class='avatar'>
+        <image src='{{news.avatar}}'></image>
+        <text>{{news.author}}</text>
+        <text>发表于</text>    
+        <text>{{news.dateTime}}</text>
+    </view>
+    <view class='title'>
+        <text>{{news.title}}</text>
+        <view></view>
+        <image bindtap='changeCollection'  src='{{collected?"/images/icon/collection.png":"/images/icon/collection-anti.png"}}'></image>
+        <image src='/images/icon/share.png'></image>
+    </view>
+    
+    <view class='detail'>
+        <text>{{news.detail}}</text>
+    </view>
+</view> 
